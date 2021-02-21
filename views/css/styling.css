@@ -1,0 +1,151 @@
+.circle {
+  background: #3f52e3;
+  border-radius: 50px;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+  margin: auto;
+  top: 0;
+  bottom:300px;
+  right: 10px;
+  left: 0;
+  z-index: 2;
+}
+
+.circle:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -5px;
+  bottom: 0;
+  margin: auto;
+}
+.circlee {
+  background: #3f52e3;
+  border-radius: 50px;
+  height: 50px;
+  position: relative;
+  width: 50px;
+  margin: auto;
+  top: -240px;
+  bottom:300px;
+  right: 10px;
+  left: 0;
+  z-index: 2;
+}
+
+.circlee:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -5px;
+  bottom: 0;
+  margin: auto;
+}
+.circleee {
+  background: #3f52e3;
+  border-radius: 50px;
+  height: 50px;
+  position: relative;
+  width: 50px;
+  margin: auto;
+  top: -100px;
+  bottom:100px;
+  right: 40px;
+  left: -35px;
+  z-index: 2;
+}
+
+.circleee:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -5px;
+  bottom: 0;
+  margin: auto;
+}
+@media only screen and (width : 600px) and (height : 1024px) and (orientation: portrait){
+  .circle {
+    background: #3f52e3;
+    border-radius: 50px;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    margin: auto;
+    top: -50px;
+    bottom:300px;
+    right: 10px;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .circle:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -5px;
+    bottom: 0;
+    margin: auto;
+  }
+
+}
+@media only screen and (width : 280px) and (height : 653px) and (orientation: portrait){
+  .circle {
+    background: #3f52e3;
+    border-radius: 50px;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    margin: auto;
+    top: -50px;
+    bottom:300px;
+    right: 10px;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .circle:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -5px;
+    bottom: 0;
+    margin: auto;
+  }
+
+}

@@ -1,0 +1,52 @@
+<%- include('../_layouts/adminheader') %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/adminstyle.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<script src="//cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
+<script src="/js/main1.js"></script>
+<h2 class="page-title">Photos</h2>
+<a href="/admin/photo/add-photo" class="btn btn-primary">Add a new Photo</a>
+<br><br>
+
+<% if (count > 0) { %>
+
+<table class="table table-striped alignmiddle">
+
+    <thead>
+        <tr class="home">
+            <th>Title</th>
+            <th>Date</th>
+            <th>Content</th>
+            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Photo Image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% photos.forEach(function(photo){ %>
+        <tr>
+            <td><%= photo.title %></td>
+            <td><%= photo.date %></td>
+            <td><%= photo.content %></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <% if (photo.image == "") { %>
+                <img id="noimage" src="/images/noimage.jpeg" width="200px" height="200px">
+                <% } else {%>
+                <img id="noimage" width="150px" height="150px" src="/photo_images/<%=photo ._id %>/<%= photo.image %>">
+                <% }%>
+            </td>
+            <td><a href="/admin/photo/edit-photo/<%= photo._id %>">Edit</a></td>
+            <td><a class="confirmDeletion" href="/admin/photo/delete-photo/<%= photo._id %>">Delete</a></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+<script>
+    CKEDITOR.replace('ta');
+</script>
+<% } else {%>
+<h3 class="text-center">There are no Photos.</h3>
+<% }%>
